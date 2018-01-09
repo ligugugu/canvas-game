@@ -16,7 +16,7 @@ var bgReady = false;
 var bgImage = new Image();
 bgImage.onload = function(){
 	bgReady = true;
-	
+
 };
 bgImage.src = "images/background.png";
 
@@ -35,7 +35,7 @@ var MonsterImage = new Image();
 MonsterImage.onload = function(){
 	MonsterReady  = true;
 }
-MonsterImage.src = "images/Monster.png";
+MonsterImage.src = "images/monster.png";
 
 //Game objects
 var hero = {
@@ -63,7 +63,7 @@ var reset = function(){
 	console.log(hero.y)
 
 	monster.x = 32 + (Math.random() * (canvas.width - 64));
-	monster.y = 32 + (Math.random() * (canvas.height - 64)); 
+	monster.y = 32 + (Math.random() * (canvas.height - 64));
 }
 
 var update = function(modifier){
