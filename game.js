@@ -33,7 +33,7 @@ var MonsterImage = new Image();
 MonsterImage.onload = function(){
 	MonsterReady  = true;
 }
-MonsterImage.src = "image/Monster.png";
+MonsterImage.src = "image/monster.png";
 
 //Game objects
 var hero = {
@@ -59,7 +59,7 @@ var reset = function(){
 	hero.y = canvas.height / 2;
 
 	monster.x = 32 + (Math.random() * (canvas.width - 64));
-	monster.y = 32 + (Math.random() * (canvas.height - 64)); 
+	monster.y = 32 + (Math.random() * (canvas.height - 64));
 }
 
 var update = function(modifier){
