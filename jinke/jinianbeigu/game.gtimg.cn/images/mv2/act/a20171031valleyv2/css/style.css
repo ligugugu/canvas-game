@@ -1,0 +1,208 @@
+
+/*loading*/
+.loading-wrap{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+.loading{
+	position: relative;
+	width: 100%;
+}
+#loading_inner{
+	position: absolute;
+	bottom: 10%;
+	left: 47%;
+	color: #fff;
+	text-align: center;
+	font-size: 28px;
+	line-height: 28px;
+}
+/*public*/
+.musicicon{
+	position:absolute;
+	width:12.5%;
+	padding-bottom: 12.5%;
+	top:2%;
+	right:4%;
+	z-index: 10000;
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/music.png) top center no-repeat;
+	background-size:100% auto;
+	background-position: 0% 0%;
+}
+.musicicon.on{
+	background-position: 0% 100%;
+
+}
+@font-face {
+	font-family: "myFont";
+	src: url("//game.gtimg.cn/images/mv2/act/a20171031valleyv2/font/TTSquaresCondensedThinDEMO.otf");
+}
+.nubStyle{ font-family: "myFont", "Microsoft YaHei" }
+
+/*pages*/
+.resize-wrapper{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	padding-bottom:177.5%;
+}
+#wrapbox{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	overflow: hidden;
+	background: #000;
+
+}
+
+/*
+temp
+.p1{background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/p1_bg.jpg) top center no-repeat;background-size:100% auto;}
+*/
+.startBtnWrap{
+	position: absolute;
+	bottom: 7%;
+	left: 44%;
+	width:13.43%;
+	padding-bottom:13.125%;
+
+}
+
+.startBtn{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/startBtn.png) top center no-repeat;
+	background-size:contain;
+}
+.startBtnLine{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/startBtnLine.png) top center no-repeat;
+	background-size:contain;
+}
+.video1{
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.ending{
+	position: relative;
+	width: 100%;
+}
+.engdingWrap{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.logo{
+	position: absolute;
+	top: 7%;
+	left: 10%;
+	width:23.43%;
+	padding-bottom:5%;
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/logo.png) top center no-repeat;
+	background-size:contain;
+}
+
+.iosDownLoadWrap,.androDownLoadWrap{
+	position: absolute;
+	top: 56%;
+	left: 26%;
+	width:48.90%;
+	padding-bottom:13.75%;
+}
+.iosDownLoad{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosDownLoad.png) top center no-repeat;
+	background-size:contain;
+}
+.iosDownLoadLine{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosDownLoadLine.png) top center no-repeat;
+	background-size:contain;
+}
+.androDownLoad{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/androDownLoad.png) top center no-repeat;
+	background-size:contain;
+}
+.iosDownLoadLine{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosDownLoadLine.png) top center no-repeat;
+	background-size:contain;
+}
+
+
+.iosText{
+	position: absolute;
+	top: 71%;
+	left: 38%;
+	width:26.4%;
+	padding-bottom:8.59%;
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosText.png) top center no-repeat;
+	background-size:contain;
+}
+.androText{
+	position: absolute;
+	top: 71%;
+	left: 36%;
+	width:30%;
+	padding-bottom:14.218%;
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/androText.png) top center no-repeat;
+	background-size:contain;
+}
+.videoBtn{
+	position: absolute;
+	bottom: 7%;
+	right: 8%;
+	width:10.31%;
+	padding-bottom:12.5%;
+	opacity: 0.8;
+
+}
+.videoBtn.on{
+	opacity: 0.8;
+}
+.androVideoBtn{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosVideoBtn.png) top center no-repeat;
+	background-size:contain;
+}
+.iosVideoBtn{
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/iosVideoBtn.png) top center no-repeat;
+	background-size:contain;
+}
+
+.p1_pic{
+	width:100%;
+	padding-bottom:100%;
+	margin: 5% auto 0 ;
+	background:url(//game.gtimg.cn/images/mv2/act/a20171031valleyv2/img/music.png) top center no-repeat;
+	background-size:contain;
+}
+
+.skip{
+	position: absolute;
+	top: 3%;
+	left: 5%;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 2%;
+	color: #fff;
+	background: rgba(0,255,0,1);
+}
+
+
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+	opacity: 0;
+	pointer-events: none;
+	width: 5px;
+}
+
+
+
+
