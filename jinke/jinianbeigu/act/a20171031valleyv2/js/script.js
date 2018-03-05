@@ -8,12 +8,12 @@ var __isSoundOn=true;
 var videoPlayer;
 var __soundPart=1;
 /**
- * 音乐icon & 提示箭头 
+ * 音乐icon & 提示箭头
  */
 $(function(){
 	// var musicHtml = "<img src=\""+BASE_PATH+"img/music.png\" class=\"musicicon musicplay\"/>";
 	// $(".page").append(musicHtml);
-	
+
 	$(".musicicon").on(EVENT_TYPE, function() {
 		__isSoundOn=!__isSoundOn;
 		__isSoundOn?$(".musicicon").removeClass("on"):$(".musicicon").addClass("on");
@@ -28,14 +28,14 @@ $(function(){
 });
 
 /**
- * 图片预加载 
+ * 图片预加载
  */
 $(function(){
 	// prevent iphone touchmove
 	$(document).on("touchmove",function (event) {
     	event.preventDefault();
     });
-	
+
     var loader = new PxLoader(),
 	    // 把页面的图片列在这里
         fileList = [
@@ -119,7 +119,7 @@ $(function(){
     var isMobileQQ = !!(typeof mqq != "undefined" && typeof mqq.QQVersion != "undefined" && mqq.QQVersion != 0 && !(/Qzone/.test(navigator.userAgent)));
     var userPhone=userAgent();
 
-    var videoSrc="//dlied1.qq.com/yxgw/mv2/mv2_a20171031valleyv2.mp4";
+    var videoSrc="../../video/3031.mp4";
     videoPlayer=new MMD.VideoPlayer({
         videoElement:document.getElementById('video'),
         src:videoSrc,
@@ -276,7 +276,7 @@ $(function(){
 
 });
 /**
- * 交互事件监听 
+ * 交互事件监听
  */
 $(function(){
     canvas_ending.picReady();
@@ -380,7 +380,7 @@ function pageShow(){
 }
 
 function showPage1() {
-	
+
 }
 
 
@@ -400,7 +400,7 @@ $(document).ready(function(){
     setTimeout(function () {
         resize();
     },200);
-	
+
 });
 
 function resize(){
@@ -436,17 +436,3 @@ function resize(){
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
