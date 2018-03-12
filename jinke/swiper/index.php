@@ -7,7 +7,7 @@ $signPackage = $jssdk->GetSignPackage();
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>中庄翠庭微楼书</title>
+    <title>中国金科 华南品牌发布会  邀请函</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Swiper's CSS -->
@@ -79,7 +79,7 @@ $signPackage = $jssdk->GetSignPackage();
         to { transform: rotate(360deg);}
     }
 
-        
+
 
 
     </style>
@@ -87,393 +87,62 @@ $signPackage = $jssdk->GetSignPackage();
 <body>
     <!-- music -->
     <a href="javascript:0" id="micBtn" class="micBtn rotate"></a>
-
-    <div class="menu"></div>
     <!-- 提示页面下翻 箭头 -->
-    <div class="arraw"></div>
-
-    <!--  遮罩页面     -->
-    <div class="mask-view">
-        <div class="mask-panel">
-            <div data-id="1" class="item-1">
-                <img src="image/0_1.png">
-            </div>
-
-            <div data-id="4" class="item-2">
-                <img src="image/0_2.png">
-            </div>
-
-
-             <div data-id="6" class="item-3">
-                <img src="image/0_3.png">
-            </div>
-
-
-             <div data-id="10" class="item-4">
-                <img src="image/0_4.png">
-            </div>
-
-            <div data-id="12" class="item-5">
-                <img src="image/0_5.png">
-            </div>
-        </div>
-
-
-    </div>
+    <!-- <div class="arraw"></div> -->
 
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="page page-1">
+                <div class="page page-1 ">
+                    <div class="ani page page-1" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
 
-
-                    <div class="line"></div>
-
-                    <div class="ani p1-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/1_1.png">
-                    </div>
-
-                    <div class="ani p1-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/1_2.png">
-                    </div>
-
-                </div>        
+                </div>
             </div>
-            
+
             <div class="swiper-slide">
                 <div class="page page-2">
 
                     <div class="ani page page-2" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
 
-                    <div class="ani p2-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/2_1.png">
-                    </div>
-
-
-                    <div class="ani p2-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/2_2.png">
-                    </div>
-                </div>        
+                </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="page page-3">
 
                      <div class="ani page page-3" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="ani p3-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/3_1.png">
-                    </div>
 
-                    
-                    <div class="ani p3-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/3_2.png">
-                    </div>
-
-                </div>        
+                </div>
             </div>
 
 
             <div class="swiper-slide">
                 <div class="page page-4" >
-                    
+
                     <div class="ani page page-4" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
                     <div class="line"></div>
-                    <div class="ani p4-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/4_1.png">
-                    </div>
 
-                    
-                    <div class="ani p4-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/4_2.png">
-                    </div>
-
-                </div>        
+                </div>
             </div>
 
             <div class="swiper-slide">
                 <div class="page page-5">
-                    
+
                     <div class="ani page page-5" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p5-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/5_1.png">
-                    </div>
 
-
-                    <div class="ani p5-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/5_2.png">
-                    </div>
-
-
-                </div>        
+                </div>
             </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-6">
-                    
-                    <div class="ani page page-6" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p6-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/6_1.png">
-                    </div>
-
-                    
-                    <div class="ani p6-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/6_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-7">
-                    
-                    <div class="ani page page-7" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p7-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/7_1.png">
-                    </div>
-
-
-                    <div class="ani p7-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/7_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-            <div class="swiper-slide">
-                <div class="page page-8">
-                    
-                    <div class="ani page page-8" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p8-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/8_1.png">
-                    </div>
-
-
-                    <div class="ani p8-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/8_2.png">
-                    </div>
-
-                </div>        
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-9">
-                    
-                    <div class="ani page page-9" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p9-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/9_1.png">
-                    </div>
-
-
-                    <div class="ani p9-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/9_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-            
-
-            <div class="swiper-slide">
-                <div class="page page-10">
-                    
-                    <div class="ani page page-10" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p10-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/10_1.png">
-                    </div>
-
-
-                    <div class="ani p10-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/10_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-11">
-                    
-                   
-                    <div class="line"></div>
-                    <div class="ani p11-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/11_1.png">
-                    </div>
-
-
-                    <div class="ani p11-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
-                        <img src="image/11_2.png">
-                    </div>
-
-<!-- 
-                    <div class="ani p11-3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-
-                    </div> -->
-
-
-                     <div class="ani p11-4" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
-                         <img src="image/11_3.png" />
-                    </div>
-
-                   
-
-
-
-
-                </div>        
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-12">
-                    
-                 
-                    <div class="line"></div>
-                    <div class="ani p12-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/12_1.png">
-                    </div>
-
-
-                    <div class="ani p12-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
-                        <img src="image/12_2.png">
-                    </div>
-
-
-                    <!--  <div class="ani p12-3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-
-                    </div> -->
-
-
-                     <div class="ani p12-4" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
-                         <img src="image/12_3.png" />
-                    </div>
-
-                </div>        
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="page page-13">
-                    
-                    <div class="ani page page-13" swiper-animate-effect="" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p13-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/13_1.png">
-                    </div>
-
-
-                    <div class="ani p13-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
-                        <img src="image/13_2.png">
-                    </div>
-
-                   <!--   <div class="ani p13-3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-
-                    </div> -->
-
-
-                     <div class="ani p13-4" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
-                         <img src="image/13_3.png" />
-                    </div>
-
-                
-
-                </div>        
-            </div>
-
-            <div class="swiper-slide">
-                <div class="page page-14">
-
-                    <div class="ani page page-14" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p14-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/14_1.png">
-                    </div>
-
-
-                    <div class="ani p14-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s">
-                        <img src="image/14_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-            <div class="swiper-slide">
-                <div class="page page-15">
-                    
-                    <div class="ani page page-15" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="line"></div>
-                    <div class="ani p15-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/15_1.png">
-                    </div>
-
-
-                    <div class="ani p15-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/15_2.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-            <div class="swiper-slide">
-                <div class="page page-16">
-                    
-                    <div class="ani page page-16" swiper-animate-effect="pulse" swiper-animate-duration="2s"></div>
-                    <div class="ani p16-0" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
-                        <img src="image/1_2.png">
-                    </div>
-
-
-                    <div class="ani p16-1" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1s">
-                        <img src="image/16_1.png">
-                    </div>
-
-                   
-
-                    <div class="ani p16-2" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="2s">
-                        <img src="image/16_2.jpg">
-                    </div>
-
-                   
-
-                     <div class="ani p16-3" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="3s">
-                        <img src="image/16_3.png">
-                    </div>
-                       
-                     <div class="ani p16-4" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0s">
-                        <img src="image/16_4.png">
-                    </div>
-
-
-                </div>        
-            </div>
-
-            
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
 
     <!-- Swiper JS -->
     <script src="dist/js/swiper.min.js"></script>
     <script src="dist/js/swiper.animate1.0.2.min.js"></script>
     <script src="dist/js/jquery-1.9.1.min.js"></script>
-    
+
 
     <!-- Initialize Swiper -->
     <script>
@@ -488,7 +157,7 @@ $signPackage = $jssdk->GetSignPackage();
         var num = $(this).attr('data-id');
         swiper.slideTo(num, 100, false);//切换到第一个slide，速度为1秒
 
-        swiperAnimateCache(swiper); //隐藏动画元素 
+        swiperAnimateCache(swiper); //隐藏动画元素
             swiperAnimate(swiper); //初始化完成开始动画
     })
 
@@ -498,12 +167,12 @@ $signPackage = $jssdk->GetSignPackage();
         updateOnImagesReady : true,
         resistanceRatio:0,
         paginationClickable: true,
-        direction: 'vertical',
+        direction: 'horizontal',
         onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
-            swiperAnimateCache(swiper); //隐藏动画元素 
+            swiperAnimateCache(swiper); //隐藏动画元素
             swiperAnimate(swiper); //初始化完成开始动画
-        }, 
-        onSlideChangeEnd: function(swiper){ 
+        },
+        onSlideChangeEnd: function(swiper){
             swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
             if(swiper.isEnd){
                 $('.arraw').fadeOut(100);
@@ -553,8 +222,8 @@ $signPackage = $jssdk->GetSignPackage();
         ]
       });
         window.shareData = {
-            "imgUrl": "http://welook.ihotd.com/zzctweiloushu0626/image/share.png",
-            "tLink": "http://welook.ihotd.com/zzctweiloushu0626/index.php",
+            "imgUrl": "http://test.ihotd.com/lixiao/zzctweiloushu0626_2017-06-25/image/share.png",
+            "tLink": "http://test.ihotd.com/lixiao/zzctweiloushu0626_2017-06-25/index.php",
             "tTitle": "中庄翠庭微楼书",
             "tContent": "繁华之上，品味人生"
             };
