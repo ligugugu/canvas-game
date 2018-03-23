@@ -233,7 +233,7 @@ function page() {
 //page2
 function page2() {
 
-
+    $(".ma").show();
     //背景
     drawImg(0, 0, 10679, 750, page2_id, 0, 'images/long_page.jpg');
 
