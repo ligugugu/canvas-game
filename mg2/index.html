@@ -32,7 +32,7 @@
     <audio id="yx6" src="music/yx6.mp3"></audio>
     <audio id="yx7" src="music/yx7.mp3"></audio>
     <audio id="yx8" src="music/yx8.mp3"></audio> -->
-
+    <audio src="audio/bgm.mp4" id="page2" preload="metadata"></audio>
     <script>
         var audio = document.getElementById('music');
         var yx1 = document.getElementById('yx1');
@@ -82,12 +82,12 @@
     <script src="src/main.js"></script>
     <script>
         // 优化分辨率
-        (function () {
-            window.onresize = function () {
-                document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
-            };
-            onresize();
-        })();
+        // (function () {
+        //     window.onresize = function () {
+        //         document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+        //     };
+        //     onresize();
+        // })();
     </script>
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script type="text/javascript" src="http://weixin.juzhen.com/WebServices/matrix.weixin.share.2.0.1.js"></script>
@@ -95,14 +95,14 @@
     <!--流量统计-->
     <!--juzhen02.com-->
     <script>
-            var _hmt = _hmt || [];
-            (function () {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?0e7766d37af44c09aba086d65ddc2c63";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
+    //audio
+    var page2 = document.getElementById('page2');
+    page2.loop = true;//音乐是否循环
+    page2.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        page2.play();
+    }, false);
+    </script>
 </body>
 
 </html>
