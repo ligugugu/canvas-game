@@ -250,6 +250,7 @@ function page2() {
             if(tt_2_x < 186) tt_2_x = tt_2_x + 10;
             if(tt_2 > 136) tt_2_x = 0;
             drawImg(117, 712, 351, 114, (1596+page2_id),(0+tt_2), 'images/icon21.png');
+
         }
 
     };
@@ -344,6 +345,7 @@ function page2() {
             // if(tt_8_x < 28) tt_8_x = tt_8_x + 10;
             // if(tt_8 > 28) tt_8_x = 0;
             drawImg(2095, 655, 850, 391, (8004+page2_id),60, 'images/icon21.png');
+            $(".ma").show();
         }
 
         // if(t_8 > 4){
@@ -360,7 +362,7 @@ function page2() {
         zhiliao_dongzuo = 2;
         fly = fly + 30;
         // back = 1;
-
+        $(".ma").show();
         if(t_8 < 15) t_8++;
         // if(t_8 > 1) drawImg(193, 0, 136, 104, (10022+page2_id), 136, 'images/t_6.png');
         // if(t_8 > 4) drawImg(0, 184, 522, 49, (9825+page2_id), 315, 'images/t_6.png');
