@@ -239,10 +239,10 @@ function page2() {
 
     //text1
     if(t_1 < 25) t_1++;
-    // if(t_1 > 5) drawImg(159, 421, 815, 189, (209+page2_id),109, 'images/icon21.png');
+    // if(t_1 > 5) drawImg(2095, 655, 850, 391, 82,60, 'images/icon21.png');
     if(t_1 > 10) drawImg(454, 111, 183, 143, (659+page2_id),370, 'images/icon21.png');
 
-    //text2
+    //text2 "醉美"
     if(Math.abs(page2_id) >1000){
         if(t_2 < 10) t_2++;
         if(t_2 > 5){
@@ -253,7 +253,7 @@ function page2() {
         }
 
     };
-    //text3
+    //text3 “游泳”
     if(Math.abs(page2_id) >1500){
         if(t_3 < 10) t_3++;
         if(t_3 > 5){
@@ -264,7 +264,7 @@ function page2() {
         }
         // drawImg(793, 208, 180, 160, (2286+page2_id),580, 'images/icon21.png');
     };
-    //text4
+    //text4 “帆船”
     if(Math.abs(page2_id) >2650){
         if(t_4 < 5) t_4++;
         if(t_4 > 1){
@@ -296,11 +296,11 @@ function page2() {
             tt_52 < 60? (tt_52 = tt_52 + 10) : (tt_52 = 60);
             if(tt_52_x < 110) tt_52_x = tt_52_x + 10;
             if(tt_52 > 60) tt_52_x = 0;
-            drawImg(1114, 160, 186, 247, (4789+page2_id-tt_52),(-30+tt_52), 'images/icon21.png');
+            drawImg(1114, 160, 186, 247, (5150+page2_id-tt_52),(-30+tt_52), 'images/icon21.png');
         }
         // drawImg(1114, 160, 186, 247, (4849+page2_id),30, 'images/icon21.png');
     };
-    //text6
+    //text6 "风筝"
     if(Math.abs(page2_id) >5100){
         if(t_6 < 15) t_6++;
         if(t_6 > 3){
@@ -318,18 +318,21 @@ function page2() {
         }
         // drawImg(1781, 141, 297, 267, (6090+page2_id),338, 'images/icon21.png');
     };
-    //text7
+    //text7 “排球”
     if(Math.abs(page2_id) >6100){
         if(t_7 < 15) t_7++;
         if(t_7 > 1){
-            tt_7 < 203? (tt_7 = tt_7 + 10) : (tt_7 = 203);
-            if(tt_7_x < 203) tt_7_x = tt_7_x + 10;
-            if(tt_7 > 203) tt_7_x = 0;
+            tt_7 < 103? (tt_7 = tt_7 + 10) : (tt_7 = 103);
+            if(tt_7_x < 103) tt_7_x = tt_7_x + 10;
+            if(tt_7 > 103) tt_7_x = 0;
             drawImg(1271, 754, 711, 111, (6687+page2_id),(0+tt_7), 'images/icon21.png');
         }
         // drawImg(1230, 525, 454, 96, (6540+page2_id), 106, 'images/t_5.png');
         if(t_7 > 4){
-            // paiqiu=1;
+            tt_72 < 200? (tt_72 = tt_72 + 10) : (tt_72 = 200);
+            if(tt_72_x < 200) tt_72_x = tt_72_x + 10;
+            if(tt_72 > 200) tt_72_x = 0;
+            drawImg(2621, 228, 178, 211, (7417+page2_id+tt_72),448, 'images/icon21.png');
         }
         // drawImg(1271, 754, 711, 111, (6687+page2_id),203, 'images/icon21.png');
     };
@@ -337,10 +340,10 @@ function page2() {
     if(Math.abs(page2_id) >7440){
         if(t_8 < 15) t_8++;
         if(t_8 > 1){
-            tt_8 < 28? (tt_8 = tt_8 + 10) : (tt_8 = 28);
-            if(tt_8_x < 28) tt_8_x = tt_8_x + 10;
-            if(tt_8 > 28) tt_8_x = 0;
-            drawImg(2109, 644, 850, 391, (8104+page2_id),60, 'images/icon21.png');
+            // tt_8 < 28? (tt_8 = tt_8 + 10) : (tt_8 = 28);
+            // if(tt_8_x < 28) tt_8_x = tt_8_x + 10;
+            // if(tt_8 > 28) tt_8_x = 0;
+            drawImg(2095, 655, 850, 391, (8004+page2_id),60, 'images/icon21.png');
         }
 
         // if(t_8 > 4){
@@ -370,124 +373,124 @@ function page2() {
         case 1:
             switch (paiqiu_run){
                 case  0:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai1.png');
-                    // drawImg(0, 0, 853, 780,7838+page2_id+page2_id,146, 'images/pai1.png');
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai1.png');
+                    // drawImg(0, 0, 500, 457,7838+page2_id+page2_id,146, 'images/pai1.png');
                     // paiqiu_run = 1;
                     break;
                 case  1:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai2.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai2.png')
                     paiqiu_run = 2;
                     break;
                 case  2:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai3.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai3.png')
                     paiqiu_run = 3;
                     break;
                 case  3:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai4.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai4.png')
                     paiqiu_run = 4;
                     break;
                 case  4:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai5.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai5.png')
                     paiqiu_run = 5;
                     break;
                 case  5:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai6.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai6.png')
                     paiqiu_run = 6;
                     break;
                 case  6:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai7.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai7.png')
                     paiqiu_run = 7;
                     break;
                 case  7:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai8.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai8.png')
                     paiqiu_run = 8;
                     break;
                 case  8:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai9.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai9.png')
                     paiqiu_run = 9;
                     break;
                 case  9:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai10.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai10.png')
                     paiqiu_run = 10;
                     break;
                 case  10:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai11.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai11.png')
                     paiqiu_run = 11;
                     break;
                 case  11:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai12.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai12.png')
                     paiqiu_run = 12;
                     break;
                 case  12:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai13.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai13.png')
                     paiqiu_run = 13;
                     break;
                 case  13:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai14.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai14.png')
                     paiqiu_run = 14;
                     break;
                 case  14:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai15.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai15.png')
                     paiqiu_run = 15;
                     break;
                 case  15:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai16.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai16.png')
                     paiqiu_run = 16;
                     break;
                 case  16:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai17.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai17.png')
                     paiqiu_run = 17;
                     break;
                 case  17:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai18.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai18.png')
                     paiqiu_run = 18;
                     break;
                 case  18:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai19.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai19.png')
                     paiqiu_run = 19;
                     break;
                 case  19:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai20.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai20.png')
                     paiqiu_run = 20;
                     break;
                 case  20:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai21.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai21.png')
                     paiqiu_run = 21;
                     break;
                 case  21:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai22.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai22.png')
                     paiqiu_run = 22;
                     break;
                 case  22:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai23.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai23.png')
                     paiqiu_run = 23;
                     break;
                 case  23:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai24.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai24.png')
                     paiqiu_run = 24;
                     break;
                 case  24:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai25.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai25.png')
                     paiqiu_run = 25;
                     break;
                 case  25:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai26.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai26.png')
                     paiqiu_run = 26;
                     break;
                 case  26:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai27.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai27.png')
                     paiqiu_run = 27;
                     break;
                 case  27:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai28.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai28.png')
                     paiqiu_run = 28;
                     break;
                 case  28:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/pai29.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/pai29.png')
                     paiqiu_run = 0;
                     break;
                 case  29:
-                    drawImg(0, 0, 853, 780,6638+page2_id,146, 'images/30.png')
+                    drawImg(0, 0, 500, 457,6838+page2_id,246, 'images/30.png')
                     mangguo_run = 30;
                     break;
             };
@@ -684,7 +687,7 @@ function page2() {
                     // break;
             };
 
-            if ( Math.abs(page2_id) < 7950) {
+            if ( Math.abs(page2_id) < 7740) {
                 page2_id = page2_id - 20;
                 console.log(page2_id);
             }
