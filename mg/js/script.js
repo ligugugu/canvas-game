@@ -764,12 +764,12 @@ function page2() {
 
 $(function(){
     //audio
-    var page2 = document.getElementById('page2');
-    page2.loop = true;//音乐是否循环
-    page2.play();
-    document.addEventListener("WeixinJSBridgeReady", function () {
-        page2.play();
-    }, false);
+    // var page2 = document.getElementById('page2');
+    // page2.loop = true;//音乐是否循环
+    // page2.play();
+    // document.addEventListener("WeixinJSBridgeReady", function () {
+    //     page2.play();
+    // }, false);
 
     //loading
     begin_play = setInterval('begin()',50);
