@@ -232,8 +232,6 @@ function page() {
 
 //page2
 function page2() {
-
-    $(".ma").show();
     //背景
     drawImg(0, 0, 10679, 750, page2_id, 0, 'images/long_page.jpg');
 
@@ -308,7 +306,7 @@ function page2() {
             tt_6 < 137? (tt_6 = tt_6 + 10) : (tt_6 = 137);
             if(tt_6_x < 137) tt_6_x = tt_6_x + 10;
             if(tt_6 > 137) tt_6_x = 0;
-            drawImg(716, 928, 490, 115, (5806+page2_id),(0+tt_6), 'images/icon21.png');
+            drawImg(716, 928, 490, 115, (5706+page2_id),(0+tt_6), 'images/icon21.png');
         }
         // drawImg(716, 928, 490, 115, (5806+page2_id),137, 'images/icon21.png');
         if(t_6 > 8){
@@ -344,7 +342,7 @@ function page2() {
             // tt_8 < 28? (tt_8 = tt_8 + 10) : (tt_8 = 28);
             // if(tt_8_x < 28) tt_8_x = tt_8_x + 10;
             // if(tt_8 > 28) tt_8_x = 0;
-            drawImg(2095, 655, 850, 391, (8004+page2_id),60, 'images/icon21.png');
+            drawImg(2095, 655, 850, 391, (7904+page2_id),60, 'images/icon21.png');
             $(".ma").show();
         }
 
@@ -357,7 +355,7 @@ function page2() {
     };
 
     //text8
-    if(Math.abs(page2_id) >7950){
+    if(Math.abs(page2_id) >7580){
         //知了飞走
         zhiliao_dongzuo = 2;
         fly = fly + 30;
@@ -535,11 +533,11 @@ function page2() {
         case 0:
             switch (mangguo_run){
                 case  0:
-                    if(t_1 > 1) drawImg(0, 0, 311, 311, (400+page2_id),409, 'images/mg.png')
+                    if(t_1 > 1) drawImg(0, 0, 311, 311, (450+page2_id),409, 'images/mg.png')
                     break;
                 default :
                     if(mangguo_run2 == 0){
-                        if(t_1 > 1) drawImg(0, 0, 311, 311, 400,409, 'images/mg.png')
+                        if(t_1 > 1) drawImg(0, 0, 311, 311, 450,409, 'images/mg.png')
                         // mangguo_run2 = 1;
                     };
                     break;
@@ -552,144 +550,144 @@ function page2() {
             if(y == -100) state = 0;
             switch (mangguo_run){
                 case  0:
-                    drawImg(0, 0,311,311,400,409, 'images/01.png')
+                    drawImg(0, 0,311,311,450,409, 'images/01.png')
                     mangguo_run = 1;
                     break;
                 case  1:
-                    drawImg(0, 0,311,311,400,409, 'images/02.png')
+                    drawImg(0, 0,311,311,450,409, 'images/02.png')
                     mangguo_run = 2;
                     break;
                 case  2:
-                    drawImg(0, 0,311,311,400,409, 'images/03.png')
+                    drawImg(0, 0,311,311,450,409, 'images/03.png')
                     mangguo_run = 3;
                     break;
                 case  3:
-                    drawImg(0, 0,311,311,400,409, 'images/04.png')
+                    drawImg(0, 0,311,311,450,409, 'images/04.png')
                     mangguo_run = 4;
                     break;
                 case  4:
-                    drawImg(0, 0,311,311,400,409, 'images/05.png')
+                    drawImg(0, 0,311,311,450,409, 'images/05.png')
                     mangguo_run = 5;
                     break;
                 case  5:
-                    drawImg(0, 0,311,311,400,409, 'images/06.png')
+                    drawImg(0, 0,311,311,450,409, 'images/06.png')
                     mangguo_run = 6;
                     break;
                 case  6:
-                    drawImg(0, 0,311,311,400,409, 'images/07.png')
+                    drawImg(0, 0,311,311,450,409, 'images/07.png')
                     mangguo_run = 7;
                     break;
                 case  7:
-                    drawImg(0, 0,311,311,400,409, 'images/08.png')
+                    drawImg(0, 0,311,311,450,409, 'images/08.png')
                     mangguo_run = 8;
                     break;
                 case  8:
-                    drawImg(0, 0,311,311,400,409, 'images/09.png')
+                    drawImg(0, 0,311,311,450,409, 'images/09.png')
                     mangguo_run = 9;
                     break;
                 case  9:
-                    drawImg(0, 0,311,311,400,409, 'images/10.png')
+                    drawImg(0, 0,311,311,450,409, 'images/10.png')
                     mangguo_run = 10;
                     break;
                 case  10:
-                    drawImg(0, 0,311,311,400,409, 'images/11.png')
+                    drawImg(0, 0,311,311,450,409, 'images/11.png')
                     mangguo_run = 11;
                     break;
                 case  11:
-                    drawImg(0, 0,311,311,400,409, 'images/12.png')
+                    drawImg(0, 0,311,311,450,409, 'images/12.png')
                     mangguo_run = 12;
                     break;
                 case  12:
-                    drawImg(0, 0,311,311,400,409, 'images/13.png')
+                    drawImg(0, 0,311,311,450,409, 'images/13.png')
                     mangguo_run = 13;
                     break;
                 case  13:
-                    drawImg(0, 0,311,311,400,409, 'images/14.png')
+                    drawImg(0, 0,311,311,450,409, 'images/14.png')
                     mangguo_run = 14;
                     break;
                 case  14:
-                    drawImg(0, 0,311,311,400,409, 'images/15.png')
+                    drawImg(0, 0,311,311,450,409, 'images/15.png')
                     mangguo_run = 15;
                     break;
                 case  15:
-                    drawImg(0, 0,311,311,400,409, 'images/16.png')
+                    drawImg(0, 0,311,311,450,409, 'images/16.png')
                     mangguo_run = 16;
                     break;
                 case  16:
-                    drawImg(0, 0,311,311,400,409, 'images/17.png')
+                    drawImg(0, 0,311,311,450,409, 'images/17.png')
                     mangguo_run = 17;
                     break;
                 case  17:
-                    drawImg(0, 0,311,311,400,409, 'images/18.png')
+                    drawImg(0, 0,311,311,450,409, 'images/18.png')
                     mangguo_run = 18;
                     break;
                 case  18:
-                    drawImg(0, 0,311,311,400,409, 'images/19.png')
+                    drawImg(0, 0,311,311,450,409, 'images/19.png')
                     mangguo_run = 19;
                     break;
                 case  19:
-                    drawImg(0, 0,311,311,400,409, 'images/20.png')
+                    drawImg(0, 0,311,311,450,409, 'images/20.png')
                     mangguo_run = 20;
                     break;
                 case  20:
-                    drawImg(0, 0,311,311,400,409, 'images/21.png')
+                    drawImg(0, 0,311,311,450,409, 'images/21.png')
                     mangguo_run = 21;
                     break;
                 case  21:
-                    drawImg(0, 0,311,311,400,409, 'images/22.png')
+                    drawImg(0, 0,311,311,450,409, 'images/22.png')
                     mangguo_run = 22;
                     break;
                 case  22:
-                    drawImg(0, 0,311,311,400,409, 'images/23.png')
+                    drawImg(0, 0,311,311,450,409, 'images/23.png')
                     mangguo_run = 23;
                     break;
                 case  23:
-                    drawImg(0, 0,311,311,400,409, 'images/24.png')
+                    drawImg(0, 0,311,311,450,409, 'images/24.png')
                     mangguo_run = 24;
                     break;
                 case  24:
-                    drawImg(0, 0,311,311,400,409, 'images/25.png')
+                    drawImg(0, 0,311,311,450,409, 'images/25.png')
                     mangguo_run = 25;
                     break;
                 case  25:
-                    drawImg(0, 0,311,311,400,409, 'images/26.png')
+                    drawImg(0, 0,311,311,450,409, 'images/26.png')
                     mangguo_run = 26;
                     break;
                 case  26:
-                    drawImg(0, 0,311,311,400,409, 'images/27.png')
+                    drawImg(0, 0,311,311,450,409, 'images/27.png')
                     mangguo_run = 27;
                     break;
                 case  27:
-                    drawImg(0, 0,311,311,400,409, 'images/28.png')
+                    drawImg(0, 0,311,311,450,409, 'images/28.png')
                     mangguo_run = 28;
                     break;
                 case  28:
-                    drawImg(0, 0,311,311,400,409, 'images/29.png')
+                    drawImg(0, 0,311,311,450,409, 'images/29.png')
                     mangguo_run = 29;
                     break;
                 case  29:
-                    drawImg(0, 0,311,311,400,409, 'images/30.png')
+                    drawImg(0, 0,311,311,450,409, 'images/30.png')
                     mangguo_run = 30;
                     break;
                 case  30:
-                    drawImg(0, 0,311,311,400,409, 'images/31.png')
+                    drawImg(0, 0,311,311,450,409, 'images/31.png')
                     mangguo_run = 31;
                     break;
                 case  31:
-                    drawImg(0, 0,311,311,400,409, 'images/32.png')
+                    drawImg(0, 0,311,311,450,409, 'images/32.png')
                     mangguo_run = 32;
                     break;
                 case  32:
-                    drawImg(0, 0,311,311,400,409, 'images/33.png')
+                    drawImg(0, 0,311,311,450,409, 'images/33.png')
                     mangguo_run = 0;
                     break;
                 case  33:
-                    drawImg(0, 0,311,311,400,409, 'images/0.png')
+                    drawImg(0, 0,311,311,450,409, 'images/0.png')
                     mangguo_run = 1;
                     // break;
             };
 
-            if ( Math.abs(page2_id) < 7740) {
+            if ( Math.abs(page2_id) < 7580) {
                 page2_id = page2_id - 20;
                 console.log(page2_id);
             }
