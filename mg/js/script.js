@@ -169,6 +169,7 @@ function begin() {
             "images/pai26.png",
             "images/pai27.png",
             "images/pai28.png",
+            "images/sou.png",
             "images/pai29.png"
             // "images/share.png"
         ];
@@ -225,7 +226,7 @@ function page2() {
 
     //text1
     if(t_1 < 25) t_1++;
-    // if(t_1 > 5) drawImg(2095, 655, 850, 391, 82,60, 'images/icon21.png');
+    if(t_1 > 5) drawImg(0, 0, 48, 75, 500, 600, 'images/sou.png');
     if(t_1 > 10) drawImg(454, 111, 183, 143, (659+page2_id),370, 'images/icon21.png');
 
     //text2 "醉美"
