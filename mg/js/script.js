@@ -122,6 +122,7 @@ function begin() {
 
             // "images/icon.png",
             "images/icon21.png",
+            "images/icon3.png",
             "images/mg.png",
             "images/01.png",
             "images/02.png",
@@ -239,7 +240,7 @@ function page2() {
             tt_2 < 136? (tt_2 = tt_2 + 10) : (tt_2 = 136);
             if(tt_2_x < 186) tt_2_x = tt_2_x + 10;
             if(tt_2 > 136) tt_2_x = 0;
-            drawImg(117, 712, 351, 114, (1596+page2_id),(0+tt_2), 'images/icon21.png');
+            drawImg(204, 192, 450, 145, (1596+page2_id),(0+tt_2), 'images/icon3.png');
 
         }
 
@@ -262,7 +263,7 @@ function page2() {
             tt_4 < 249? (tt_4 = tt_4 + 10) : (tt_4 = 249);
             if(tt_4_x < 299) tt_4_x = tt_4_x + 10;
             if(tt_4 > 249) tt_4_x = 0;
-            drawImg(202, 954, 300, 110, (3244+page2_id),(0+tt_4), 'images/icon21.png');
+            drawImg(189, 407, 402, 148, (3244+page2_id),(0+tt_4), 'images/icon3.png');
         }
         // drawImg(202, 954, 300, 110, (3244+page2_id),249, 'images/icon21.png');
         // if(t_4 > 3) {
@@ -293,7 +294,7 @@ function page2() {
             tt_5 < 299? (tt_5 = tt_5 + 10) : (tt_5 = 299);
             if(tt_5_x < 339) tt_5_x = tt_5_x + 10;
             if(tt_5 > 299) tt_5_x = 0;
-            drawImg(683, 717, 372, 115, (4549+page2_id),(0+tt_5), 'images/icon21.png');
+            drawImg(771, 204, 456, 139, (4549+page2_id),(0+tt_5), 'images/icon3.png');
         }
         // drawImg(683, 717, 372, 115, (4549+page2_id),299, 'images/icon21.png');
         if(t_5 > 5){
@@ -311,7 +312,7 @@ function page2() {
             tt_6 < 137? (tt_6 = tt_6 + 10) : (tt_6 = 137);
             if(tt_6_x < 137) tt_6_x = tt_6_x + 10;
             if(tt_6 > 137) tt_6_x = 0;
-            drawImg(716, 928, 490, 115, (5706+page2_id),(0+tt_6), 'images/icon21.png');
+            drawImg(764, 430, 612, 148, (5606+page2_id),(0+tt_6), 'images/icon3.png');
         }
         // drawImg(716, 928, 490, 115, (5806+page2_id),137, 'images/icon21.png');
         if(t_6 > 8){
@@ -329,7 +330,7 @@ function page2() {
             tt_7 < 103? (tt_7 = tt_7 + 10) : (tt_7 = 103);
             if(tt_7_x < 103) tt_7_x = tt_7_x + 10;
             if(tt_7 > 103) tt_7_x = 0;
-            drawImg(1271, 754, 711, 111, (6687+page2_id),(0+tt_7), 'images/icon21.png');
+            drawImg(1434, 202, 910, 148, (6687+page2_id),(0+tt_7), 'images/icon3.png');
         }
         // drawImg(1230, 525, 454, 96, (6540+page2_id), 106, 'images/t_5.png');
         if(t_7 > 4){
@@ -506,7 +507,7 @@ function page2() {
     tt_1 < 109? (tt_1 = tt_1 + 10) : (tt_1 = 109);
     if(tt_1_x < 159) tt_1_x = tt_1_x + 10;
     if(tt_1 > 109) tt_1_x = 0;
-    drawImg(159, 421, 815, 189, (209+page2_id),(0+tt_1), 'images/icon21.png');
+    drawImg(1506, 428, 849, 205, (209+page2_id),(0+tt_1), 'images/icon3.png');
 
     //标题2
     // tt_1 < 200? (tt_1 = tt_1 + 10) : (tt_1 = 200);
@@ -754,7 +755,7 @@ function page2() {
 
     //button
     if(back == 0){
-        drawImg(1347, 938, 163, 110, 30, 610, 'images/icon21.png');
+        drawImg(1582, 941, 141, 91, 30, 610, 'images/icon21.png');
     }else{
         drawImg(0, 0, 165, 100,((w_canvas/w_bili)-185), 630, 'images/back.png');
     };
