@@ -161,7 +161,7 @@ GameScene.prototype.init = function () {
     t7_1.visible = false;
 
 
-    var t8_1 = Utils.createSprite('t8_1', { x: 449, y: 6780 }, { x: 0, y: 0 }, bgGroup, 0);
+    var t8_1 = Utils.createSprite('t8_1', { x: 449, y: 6830 }, { x: 0, y: 0 }, bgGroup, 0);
     t8_1.visible = false;
 
 
