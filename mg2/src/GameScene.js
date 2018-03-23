@@ -130,11 +130,11 @@ GameScene.prototype.init = function () {
     // gniao10.visible = false;
 
     // 文字
-    var t1_1 = Utils.createSprite('t1_1', { x: 449, y: 277 }, { x: 0, y: 0 }, bgGroup, 0);
+    var t1_1 = Utils.createSprite('t1_1', { x: 449, y: 207 }, { x: 0, y: 0 }, bgGroup, 0);
     t1_1.visible = false;
     var t1_2 = Utils.createSprite('t1_2', { x: 50, y: 0 }, { x: 0, y: 0 }, bgGroup, 0);
     t1_2.visible = false;
-    var t1_3 = Utils.createSprite('t1_3', { x: 700, y: 677 }, { x: 0, y: 0 }, bgGroup, 0);
+    var t1_3 = Utils.createSprite('t1_3', { x: 700, y: 627 }, { x: 0, y: 0 }, bgGroup, 0);
     t1_3.visible = false;
 
     var t2_1 = Utils.createSprite('t2_1', { x: 449, y: 1327 }, { x: 0, y: 0 }, bgGroup, 0);
@@ -161,7 +161,7 @@ GameScene.prototype.init = function () {
     t7_1.visible = false;
 
 
-    var t8_1 = Utils.createSprite('t8_1', { x: 449, y: 6860 }, { x: 0, y: 0 }, bgGroup, 0);
+    var t8_1 = Utils.createSprite('t8_1', { x: 449, y: 6780 }, { x: 0, y: 0 }, bgGroup, 0);
     t8_1.visible = false;
 
 
@@ -242,7 +242,7 @@ GameScene.prototype.init = function () {
         }
         if(bgGroup.y < -(t1_2.y - renderer.height + 10)) {
             t1_2.visible = true;
-            Actions.fadeInDown(t1_2,400,200);
+            Actions.fadeInDown(t1_2,350,200);
         }
         if(bgGroup.y < -(t1_3.y - renderer.height + 5)) {
             t1_3.visible = true;
@@ -283,7 +283,7 @@ GameScene.prototype.init = function () {
 
         if((bgGroup.y+500) < -(t8_1.y - renderer.height + 50)) {
             t8_1.visible = true;
-            Actions.fadeInRight(t8_1,280);
+            Actions.fadeInRight(t8_1,230);
         }
 
 
