@@ -23,6 +23,7 @@ var canvas = document.getElementById('canvas'),
     t_6 = 0,
     t_7 = 0,
     t_8 = 0,
+    t_9 = 0,
     //落叶
     y_1 = 0,
     y_2 = 0,
@@ -74,6 +75,8 @@ var canvas = document.getElementById('canvas'),
     tt_8_x=0,
     tt_82=0,
     tt_82_x=0,
+    tt_9=0,
+    tt_9_x=0,
     paiqiu_run = 1,
     paiqiu = 1;
 
@@ -226,7 +229,7 @@ function page2() {
 
     //text1
     if(t_1 < 25) t_1++;
-    if(t_1 > 5) drawImg(0, 0, 48, 75, 500, 600, 'images/sou.png');
+    // if(t_1 > 5) drawImg(0, 0, 48, 75, 500, 600, 'images/sou.png');
     if(t_1 > 10) drawImg(454, 111, 183, 143, (659+page2_id),370, 'images/icon21.png');
 
     //text2 "醉美"
@@ -262,11 +265,24 @@ function page2() {
             drawImg(202, 954, 300, 110, (3244+page2_id),(0+tt_4), 'images/icon21.png');
         }
         // drawImg(202, 954, 300, 110, (3244+page2_id),249, 'images/icon21.png');
-        if(t_4 > 3) {
-            tt_42 < 300? (tt_42 = tt_42 + 2) : (tt_42 = 300);
-            if(tt_42_x < 350) tt_42_x = tt_42_x + 2;
-            if(tt_42 > 300) tt_42_x = 0;
-            drawImg(1493, 182, 115, 210, (3514+page2_id+tt_42),528, 'images/icon21.png');
+        // if(t_4 > 3) {
+        //     tt_42 < 300? (tt_42 = tt_42 + 2) : (tt_42 = 300);
+        //     if(tt_42_x < 350) tt_42_x = tt_42_x + 2;
+        //     if(tt_42 > 300) tt_42_x = 0;
+        //     drawImg(1493, 182, 115, 210, (3314+page2_id+tt_42),528, 'images/icon21.png');
+        // }
+            // drawImg(1493, 182, 115, 210, (3514+page2_id),528, 'images/icon21.png');
+    };
+
+    //text4 “帆船”
+    if(Math.abs(page2_id) >2800){
+        // drawImg(202, 954, 300, 110, (3244+page2_id),249, 'images/icon21.png');
+        if(t_9 < 5) t_9++;
+        if(t_9 > 3) {
+            tt_9 < 300? (tt_9 = tt_9 + 2) : (tt_9 = 300);
+            if(tt_9_x < 350) tt_9_x = tt_9_x + 2;
+            if(tt_9 > 300) tt_9_x = 0;
+            drawImg(1493, 182, 115, 210, (3314+page2_id+tt_9),528, 'images/icon21.png');
         }
             // drawImg(1493, 182, 115, 210, (3514+page2_id),528, 'images/icon21.png');
     };
