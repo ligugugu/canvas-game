@@ -216,7 +216,7 @@ function loading(images) {
                 w_canvas = window.innerWidth,
                     h_canvas = window.innerHeight,
                     // w_bili = w_canvas / 1140,//1140 - 画布的宽度
-                    w_bili = w_canvas / 1240,//1140 - 画布的宽度
+                    w_bili = w_canvas / 1334,//1140 - 画布的宽度
                     h_bili = h_canvas / 750,//750 - 画布的高度
                     //$("#canvas").attr({width:w_canvas, height:h_canvas});
                 word = 1;
