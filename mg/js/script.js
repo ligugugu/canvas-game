@@ -755,7 +755,7 @@ function page2() {
 
     //button
     if(back == 0){
-        drawImg(1582, 941, 141, 91, 30, 610, 'images/icon21.png');
+        drawImg(1596, 929, 202, 157, 50, 580, 'images/icon21.png');
     }else{
         drawImg(0, 0, 165, 100,((w_canvas/w_bili)-185), 630, 'images/back.png');
     };
@@ -784,7 +784,7 @@ $(function(){
                 dy = Math.ceil(parseInt(y) / h_bili);// y = dy * h_bili -> dy = y/h_bili
 
             //btn right
-            if ((30 < dx && dx < 193) && (610 < dy && dy < 720)) {
+            if ((50 < dx && dx < 252) && (580 < dy && dy < 737)) {
                 mangguo_dongzuo = 1;
                 paiqiu_run =1;
             };
