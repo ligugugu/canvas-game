@@ -12,13 +12,54 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    top:30vh;
+    top:25vh;
 }
 .con{
     position: relative;
     margin: 0 auto;
     width: 100%;
     height: 100%;
+}
+/* music */
+.music {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+    z-index: 100;
+}
+.control {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.contro2{
+  background: url(http://oss.szzbmy.com/rp2/apps/static/widget/music/music_c0fda01.gif) transparent no-repeat center center;
+    background-size: contain;
+}
+.control-after {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -.75rem;
+    margin-left: -1.75rem;
+    background: url(http://oss.szzbmy.com/rp2/apps/static/widget/music/music_off_8d94020.png) transparent no-repeat center center;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.rotate2d {
+  -webkit-animation: rotate2d 1.2s linear infinite;
+  animation: rotate2d 1.2s linear infinite;
+}
+@-webkit-keyframes rotate2d {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+@keyframes rotate2d {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
 }
 .snowglobe{
     position: absolute;
