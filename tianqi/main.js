@@ -1,5 +1,6 @@
 // ?? Fetch all DOM nodes in jQuery and Snap SVG
 
+
 var container = $('.container');
 var card = $('#card');
 var innerSVG = Snap('#inner');
@@ -19,7 +20,7 @@ var innerLightningHolder = weatherContainer1.group();
 var leafMask = outerSVG.rect();
 var leaf = Snap.select('#leaf');
 var sun = Snap.select('#sun');
-var sunburst = Snap.select('#sunburst');
+var sunburst = Snap.select('#sunburst');  //太阳svg
 var outerSplashHolder = outerSVG.group();
 var outerLeafHolder = outerSVG.group();
 var outerSnowHolder = outerSVG.group();
@@ -88,11 +89,11 @@ $(window).resize(onResize);
 
 // ?? start animations
 
-requestAnimationFrame(tick);
+requestAnimationFrame(tick); //I.
 
-function init()
+function init()   //1. 主程序
 	{
-	onResize();
+	onResize();  //2. 初始化各个数据
 
 	// ?? bind weather menu buttons
 
@@ -100,9 +101,9 @@ function init()
 	{
 		var w = weather[i];
 		var b = $('#button-' + w.type);
-		w.button = b;
+		w.button = b; //获取5个按钮的a标签id值
 		console.log(w.button)
-		b.bind('click', w, changeWeather);
+		b.bind('click', w, changeWeather); //3.
 		// $(selector).bind(event,data,function)
 		// event	必需。规定添加到元素的一个或多个事件。
 		// 由空格分隔多个事件。必须是有效的事件。
@@ -116,16 +117,16 @@ function init()
 	{
 		clouds[i].offset = Math.random() * sizes.card.width;
 
-		drawCloud(clouds[i], i);
+		drawCloud(clouds[i], i); //3.
 	}
 
-		// ?? set initial weather
+	// ?? set initial weather
 
-		TweenMax.set(sunburst.node, {opacity: 0})
-		changeWeather(weather[0]);
+	TweenMax.set(sunburst.node, {opacity: 0})
+	changeWeather(weather[0]);//4.
 	}
 
-function onResize()
+function onResize()  // 2.初始化数据，各个部分的宽高
 	{
 		// ?? grab window and card sizes
 
@@ -151,14 +152,15 @@ function onResize()
 			height: sizes.container.height
 		})
 
-		TweenMax.set(sunburst.node, {
+		TweenMax.set(sunburst.node, {  //设置参数（set）
 			transformOrigin:"50% 50%",
 			x: sizes.container.width / 2,
 			y: (sizes.card.height/2) + sizes.card.offset.top});
-		TweenMax.fromTo(sunburst.node, 20, {rotation: 0}, {
-			rotation: 360,
-			repeat: -1,
-			ease: Power0.easeInOut})
+		TweenMax.fromTo(sunburst.node, 20, {rotation: 0}, {  //动画执行（from、to、fromTo）
+			rotation: 360,  //旋转
+			repeat: -1,  //重复，-1表示无限循环
+			ease: Power0.easeInOut  //缓动
+		})
 		// ?? The leaf mask is for the leafs that float out of the
 		// container, it is full window height and starts on the left
 		// inline with the card
@@ -166,7 +168,7 @@ function onResize()
 		leafMask.attr({x: sizes.card.offset.left, y: 0, width: sizes.container.width - sizes.card.offset.left,  height: sizes.container.height});
 	}
 
-function drawCloud(cloud, i)
+function drawCloud(cloud, i) //3.云的绘制
 	{
 	/*
 
@@ -178,10 +180,15 @@ function drawCloud(cloud, i)
 
 		*/
 
-		var space  = settings.cloudSpace * i;
-		var height = space + settings.cloudHeight;
-		var arch = height + settings.cloudArch + (Math.random() * settings.cloudArch);
-		var width = sizes.card.width;
+		// var settings = {
+		// 	cloudHeight: 100,
+		// 	cloudSpace: 30,
+		// 	cloudArch: 50,
+		// };
+		var space  = settings.cloudSpace * i; //30*i
+		var height = space + settings.cloudHeight; //s + 30*i
+		var arch = height + settings.cloudArch + (Math.random() * settings.cloudArch); // h + (50~100)
+		var width = sizes.card.width; //300
 
 		var points = [];
 		points.push('M' + [-(width), 0].join(','));
@@ -196,13 +203,15 @@ function drawCloud(cloud, i)
 		points.push([-(width), 0].join(','));
 
 		var path = points.join(' ');
-		if(!cloud.path) cloud.path = cloud.group.path();
+
+		if(!cloud.path)  cloud.path= cloud.group.path();
+		console.log(cloud.path)
 		cloud.path.animate({
 	  		d: path
 		}, 0)
 	}
 
-function makeRain()
+function makeRain()//II.下雨效果
 	{
 		// ?? This is where we draw one drop of rain
 
@@ -237,10 +246,10 @@ function makeRain()
 		// Start the falling animation, calls onRainEnd when the
 		// animation finishes.
 
-		TweenMax.fromTo(line.node, 1, {x: x, y: 0- lineLength}, {delay: Math.random(), y: sizes.card.height, ease: Power2.easeIn, onComplete: onRainEnd, onCompleteParams: [line, lineWidth, x, currentWeather.type]});
+		TweenMax.fromTo(line.node, 1, {x: x, y: 0- lineLength}, {delay: Math.random(), y: sizes.card.height, ease: Power2.easeIn, onComplete: onRainEnd, onCompleteParams: [line, lineWidth, x, currentWeather.type]});//III. （回调函数及传参）雨停
 	}
 
-function onRainEnd(line, width, x, type)
+function onRainEnd(line, width, x, type)//III. （回调函数及传参）雨停
 	{
 		// first lets get rid of the drop of rain ??
 
@@ -265,11 +274,11 @@ function onRainEnd(line, width, x, type)
 			// splash. This way it looks like the closer (bigger)
 			// drops hit the the edge of the card
 
-			if(width > 2) makeSplash(x, type);
+			if(width > 2) makeSplash(x, type); //IIII.
 		}
 	}
 
-function makeSplash(x, type)
+function makeSplash(x, type)//IIII.
 	{
 		// ?? The splash is a single line added to the outer svg.
 
@@ -318,9 +327,9 @@ function makeSplash(x, type)
 
 		// Start the splash animation, calling onSplashComplete when finished
 		TweenMax.fromTo(splash.node, speed, {strokeWidth: 2, y: yOffset, x: xOffset + 20 + x, opacity: 1, strokeDashoffset: splashLength}, {strokeWidth: 0, strokeDashoffset: - pathLength, opacity: 1, onComplete: onSplashComplete, onCompleteParams: [splash], ease:  SlowMo.ease.config(0.4, 0.1, false)})
-	}
+	} //V.
 
-function onSplashComplete(splash)
+function onSplashComplete(splash) //V.
 	{
 		// ?? The splash has finished animating, we need to get rid of it
 
@@ -328,7 +337,7 @@ function onSplashComplete(splash)
 		splash = null;
 	}
 
-function makeLeaf()
+function makeLeaf()  //II.落叶效果
 	{
 		var scale = 0.5 + (Math.random() * 0.5);
 		var newLeaf;
@@ -372,9 +381,9 @@ function makeLeaf()
 
 		var bezier = [{x:x, y:y}, {x: xBezier, y:(Math.random() * endY) + (endY / 3)}, {x: endX, y:endY}]
 		TweenMax.fromTo(newLeaf.node, 2, {rotation: Math.random()* 180, x: x, y: y, scale:scale}, {rotation: Math.random()* 360, bezier: bezier, onComplete: onLeafEnd, onCompleteParams: [newLeaf], ease: Power0.easeIn})
-	}
+	}//III. （回调函数及传参）落叶
 
-function onLeafEnd(leaf)
+function onLeafEnd(leaf) //III. （回调函数及传参）落叶
 	{
 		leaf.remove();
 		leaf = null;
@@ -390,7 +399,7 @@ function onLeafEnd(leaf)
 		}
 	}
 
-function makeSnow()
+function makeSnow()//II.下雪效果
 	{
 		var scale = 0.5 + (Math.random() * 0.5);
 		var newSnow;
@@ -428,12 +437,12 @@ function makeSnow()
 		snow.push(newSnow);
 
 
-		TweenMax.fromTo(newSnow.node, 3 + (Math.random() * 5), {x: x, y: y}, {y: endY, onComplete: onSnowEnd, onCompleteParams: [newSnow], ease: Power0.easeIn})
+		TweenMax.fromTo(newSnow.node, 3 + (Math.random() * 5), {x: x, y: y}, {y: endY, onComplete: onSnowEnd, onCompleteParams: [newSnow], ease: Power0.easeIn})//III. （回调函数及传参）下雪
 		TweenMax.fromTo(newSnow.node, 1,{scale: 0}, {scale: scale, ease: Power1.easeInOut})
 		TweenMax.to(newSnow.node, 3, {x: x+((Math.random() * 150)-75), repeat: -1, yoyo: true, ease: Power1.easeInOut})
 	}
 
-function onSnowEnd(flake)
+function onSnowEnd(flake) //III. （回调函数及传参）下雪
 	{
 		flake.remove();
 		flake = null;
@@ -449,16 +458,16 @@ function onSnowEnd(flake)
 		}
 	}
 
-function tick()
+function tick() //I. 定时器
 	{
 		tickCount++;
 		var check = tickCount % settings.renewCheck;
 
 		if(check)
 		{
-			if(rain.length < settings.rainCount) makeRain();
-			if(leafs.length < settings.leafCount) makeLeaf();
-			if(snow.length < settings.snowCount) makeSnow();
+			if(rain.length < settings.rainCount) makeRain(); //II.
+			if(leafs.length < settings.leafCount) makeLeaf();//II.
+			if(snow.length < settings.snowCount) makeSnow();//II.
 		}
 
 		for(var i = 0; i < clouds.length; i++)
@@ -480,7 +489,7 @@ function tick()
 		requestAnimationFrame(tick);
 	}
 
-function reset()
+function reset() //5.
 	{
 		for(var i = 0; i < weather.length; i++)
 		{
@@ -500,11 +509,11 @@ function reset()
 		if(lightningTimeout) clearTimeout(lightningTimeout);
 		if(currentWeather.type == 'thunder')
 		{
-			lightningTimeout = setTimeout(lightning, Math.random()*6000);
+			lightningTimeout = setTimeout(lightning, Math.random()*6000); //6.
 		}
 	}
 
-function lightning()
+function lightning() //7.
 	{
 		startLightningTimer();
 		TweenMax.fromTo(card, 0.75, {y: -30}, {y:0, ease:Elastic.easeOut});
@@ -530,15 +539,16 @@ function lightning()
 		TweenMax.to(strike.node, 1, {opacity: 0, ease:Power4.easeOut, onComplete: function(){ strike.remove(); strike = null}})
 	}
 
-function changeWeather(weather)
+function changeWeather(weather) //4.
 	{
 		if(weather.data) weather = weather.data;
+		console.log(weather)
 
-		reset();
+		reset(); //4.
 
 		currentWeather = weather;
 
-		TweenMax.killTweensOf(summary);
+		TweenMax.killTweensOf(summary); //强制结束动画
 		TweenMax.to(summary, 1, {opacity: 0, x: -30, onComplete: updateSummaryText, ease: Power4.easeIn})
 
 		container.addClass(weather.type);
@@ -615,5 +625,5 @@ function changeWeather(weather)
 
 		// lightning
 
-		startLightningTimer();
+		startLightningTimer();// 5.
 	}
