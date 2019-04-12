@@ -139,7 +139,7 @@ $(function(){
         console.log(window.screen.width)
         if (window.screen.width > 768) {
           console.log('移动设备');
-          window.location.href =  'http://www.ldcywh.com'
+          window.location.href =  'http://www.lixiao55.com/www/index.html#/'
         }
     }
 })
