@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>万圣节—接糖果</title>
+    <link rel="stylesheet" href="css/index.css">
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src = "js/main2.js"></script>
+    <script src = "js/phaser.min.js"></script>
+    <style media="screen">
+    body{
+        background-color: #f9efe6;
+    }
+        *{
+            margin:0;
+            padding:0;
+        }
+        #game{
+            margin: 0;
+            padding: 0;
+            top: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="load-msg page ">
+        <img class="loadIcon" src = "img/end2.png">
+        <div class="load">
+            <img  class="load1" src="img/load1.png" alt="">
+            <img class="load2" src="img/load2.png" alt="">
+            <img class="load3" src="img/load3.png" alt="">
+            <img class="load4" src="img/load4.png" alt="">
+        </div>
+        <!-- <p id="load-msg">
+            正在加载...<span id="num"></span>
+        </p> -->
+        <img class="loadIcon2" src = "img/end3.png">
+    </div>
+
+    <div class="main">
+        <div class="page1 page hide">
+            <img class="p1_1" src = "img/p1_1.png">
+            <img class="p1_2" src = "img/p1_2.png">
+            <img class="p1_3" src = "img/p1_3.png">
+            <img class="p1_4" src = "img/p1_4.png">
+        </div>
+        <!-- <div class="page2 page hide">
+            <img class="p2_1" src = "img/p2_1.png">
+        </div> -->
+        <!-- <div class="page3 page hide">
+            <img class="p3_2" src = "img/p3_2.png">
+            <img class="p3_1" src = "img/p3_1.png">
+        </div> -->
+        <div class="page4 page hide">
+            <div id = "game"></div>
+        </div>
+    </div>
+
+<script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    console.log(w,h)
+    var game = new Phaser.Game(750,h*2,Phaser.CANVAS,'#game');
+
+    // game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    var states = {
+        boot : function() {
+        	this.preload = function() {
+        		if (typeof(GAME) !== "undefined") {
+        			this.load.baseURL = GAME + "/";
+        		}
+                this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+                this.scale.pageAlignHorizontally = true;
+                this.scale.pageAlignVertically = true;
+                // // this.scale.refresh();
+        	};
+        	this.create = function() {
+        		game.state.start('preload');
+        	};
+
+        },
+
+        preload:function(){
+            this.preload = function(){
+                game.load.image('start','img/p2.jpg');
+                game.load.image('starBtn','img/p2_1.png');
+                game.load.image('player','img/player.png');
+                game.load.image('candy1','img/red.png');
+                game.load.image('candy2','img/red2.png');
+                game.load.image('boom','img/boom.png');
+                game.load.image('boom2','img/boom2.png');
+                game.load.image('gameBg','img/bg121.png');
+                game.load.audio('bgm','mp3/victory.mp3');
+                game.load.audio('getMp3','mp3/get.mp3');
+                game.load.audio('boomMp3','mp3/boom.mp3');
+                game.load.image('endBg','img/end1.jpg');
+                game.load.image('end2','img/end2.png');
+                game.load.image('end3','img/end3.png');
+                var progressText = game.add.text(game.world.centerX,game.world.centerY,'0%',
+                    {fill:'#000',fontSize:'25px'});
+                this.stage.backgroundColor="#fff";
+                progressText.anchor.setTo(0.5, 0.5);
+                game.load.onFileComplete.add(function(progress){
+                    progressText.text = progress +'%';
+                });
+                game.load.onLoadComplete.add(onLoad);
+
+                var deadLine = false;
+                setTimeout(function(){
+                    deadLine = true;
+                },2000)
+                function onLoad(){
+                    if(deadLine){
+                        game.state.start('created');
+                    }else{
+                        setTimeout(onLoad,1000)
+                    }
+                }
+            };
+        },
+        created:function(){
+            this.create = function(){
+                var start = game.add.image(0,0,'start');
+
+                var rule1 = game.add.text(game.world.centerX,game.world.height*0.65,'游戏规则：拖动小人接住掉下来的糖果,',{
+                    fontSize:'25px',
+                    fill:'#462425',
+                    fontWeight:'bold'
+                });
+                var rule2 = game.add.text(game.world.centerX,game.world.height*0.68,'注意避开炸弹哟！',{
+                    fontSize:'25px',
+                    fill:'#462425',
+                    fontWeight:'bold'
+                });
+                rule1.anchor.setTo(0.5,0.5);
+                rule2.anchor.setTo(0.5,0.5);
+                //添加点击事件
+                game.add.button(0,game.world.centerY*1.75,'starBtn',function(){
+                    game.state.start('play')
+                });
+            }
+        },
+        play:function(){
+            var score = 0;//得分
+            var apples;
+            var player ;
+            var man ;
+            var result;
+            var bgm;
+            var getMp3;
+            var boomMp3 ;
+            var timeNum = 30;
+            this.create  = function(){
+                // bgm.pause();
+                game.physics.startSystem(Phaser.Physics.Arcade);
+                game.physics.arcade.gravity.y = 500;
+                getMp3 = game.add.audio('getMp3');
+                boomMp3 = game.add.audio('boomMp3')
+                // bgm = game.add.audio('bgm');//音乐
+                if (!bgm) {
+                    bgm = game.add.audio('bgm');
+                    bgm.loopFull();
+                }
+                var bg = game.add.tileSprite(0,0,750,h*2,'gameBg'); //背景
+                player = game.add.sprite(game.world.centerX,game.world.centerY*1.7,'player');//添加角色
+                player.anchor.setTo(0.5, 0.5);
+
+                game.physics.enable(player); // 加入物理运动
+                player.body.allowGravity = false; // 清除重力影响
+
+
+                result = game.add.text(50,50,'获得糖果：' + 0,{
+                   fontSize:'30px',
+                   fill:'#cb3c27'
+               });
+               time = game.add.text(50,100,'时间：'+30+'s',{
+                   fontSize:'30px',
+                   fill:'#cb3c27'
+               });
+
+               //背景滚动
+               bg.tilePosition.y = 1450
+               bg.autoScroll(0,200);
+            var timeTimer = game.time.create(true);
+              timeTimer.loop(1000,function(){
+                  // bg.tilePosition.y -= 1206
+                  timeNum --;
+                  // console.log(timeNum)
+                  time.text = '时间：'+timeNum+'s';
+                  if(timeNum < 0){
+                      game.state.start('over',true,false,score);
+                      timeNum = 30;
+                      score = 0;
+                  };
+              });
+              timeTimer.start();
+                //拖动人物事件
+                var touching = false;
+                game.input.onDown.add(function(pointer){
+                    if(Math.abs(pointer.x - player.x)<player.width/2) touching = true;
+                    touching = true;
+                });
+                game.input.onUp.add(function(){
+                    touching = false;
+                });
+                game.input.addMoveCallback(function(pointer,x,y,isTap){
+                    if(!isTap && touching) player.x =x;
+                });
+                //糖果
+                //添加苹果
+                apples = game.add.group();
+                var appleTypes = ['candy1','candy2','boom','boom2']
+                var appleTimer = game.time.create(true);
+                appleTimer.loop(1000,function(){
+                    var x = Math.random()*game.world.width;
+                    type = appleTypes[Math.floor(Math.random()*appleTypes.length)];
+                    var apple = apples.create(x, -100, type);
+
+                    //设置糖果加入物理运动
+                    game.physics.enable(apple);
+                });
+                appleTimer.start();
+                //开启物理运动
+
+            }
+            this.update = function() {
+               // 监听接触事件
+               game.physics.arcade.overlap(player, apples, pickApple, null, this);
+           }
+           // 接触事件
+           function pickApple(player, apple) {
+
+               if(apple.key === 'boom'){
+                    boomMp3.play();
+                    game.state.start('over',true,false,score);
+                     timeNum = 30;
+                     score = 0;
+               }
+               else if(apple.key === 'boom2'){
+                   boomMp3.play();
+                   game.state.start('over',true,false,score);
+                    timeNum = 30;
+                    score = 0;
+               }
+               else{
+                   getMp3.play();
+                   apple.kill();
+                   result.text = '获得糖果：' + (++score);
+                   // if(score == 1){
+                   //     game.state.start('over',true,false,score);
+                   //
+                   // }
+                   // bgm.pause();
+               }
+           }
+       },
+        over:function(){
+
+            var score = 0;
+            this.init = function(){
+                score = arguments[0];
+
+            }
+            this.create = function(){
+                var bg = game.add.image(0,0,'endBg'); //背景
+                bg.width = game.world.width;
+                bg.height = game.world.height;
+                var title = game.add.text(game.world.centerX,game.world.height*0.2,'游戏结束',{
+                    fontSize:'40px',
+                    fill:'#cb3c27',
+                    fontWeight:'bold'
+                });
+                var end2= game.add.sprite(game.world.centerX,game.world.height*0.4,'end2'); //背景
+                end2.anchor.setTo(0.5,0.5);
+                title.anchor.setTo(0.5,0.5);
+                var scoreStr = '你的得分是：'+score+'分';//分数
+                var scoreText = game.add.text(game.world.centerX,game.world.height*0.55,scoreStr,{
+                    fontSize:'30px',
+                    fill:'#cb3c27',
+                    fontWeight:'bold'
+                });
+                scoreText.anchor.setTo(0.5,0.5);
+                // var remind = game.add.image(0,game.world.height*0.6,'starBtn');
+                // remind.anchor.setTo(0.5,0.5);
+
+                var remind = game.add.text(game.world.centerX, game.world.height * 0.7, '点击任意位置再玩一次', {
+                    fontSize: '30px',
+                    fontWeight: 'bold',
+                    fill: '#cb3c27'
+                });
+                remind.anchor.setTo(0.5, 0.5);
+                var end3= game.add.sprite(game.world.centerX,game.world.height*0.95,'end3'); //背景
+                end3.anchor.setTo(0.5,0.5);
+                // 添加点击事件
+                game.input.onTap.add(function() {
+                    game.state.start('play');
+                });
+            }
+        }
+
+    };
+
+    Object.keys(states).map(function(key){
+        game.state.add(key,states[key]);
+    });
+
+    game.state.start('boot');
+</script>
+</body>
+</html>
