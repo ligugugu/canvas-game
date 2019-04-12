@@ -1,0 +1,14 @@
+{
+    "list":[
+        {"img":"static/img/projct1.jpg"},
+        {"img":"static/img/projct2.jpg"},
+        {"img":"static/img/projct3.jpg"},
+        {"img":"static/img/projct4.jpg"},
+        {"img":"static/img/projct5.jpg"},
+        {"img":"static/img/projct6.jpg"},
+        {"img":"static/img/projct7.jpg"},
+        {"img":"static/img/projct8.jpg"},
+        {"img":"static/img/projct9.jpg"}
+
+    ]
+}

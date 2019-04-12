@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=375, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="css/style.css"/>
+	<title>乐道创意</title>
+</head>
+<body>
+
+<div class="container page">
+	<!-- music -->
+    <a href="javascript:0" id="micBtn" class="micBtn rotate"></a>
+
+    <div class="loading ">
+		<div class='demo'>
+		  	<div class='circle'>
+		    	<div class='inner inner1'></div>
+		  	</div>
+			<div class='circle'>
+				<div class='inner inner2'></div>
+			</div>
+			<div class='circle'>
+				<div class='inner inner3'></div>
+			</div>
+			<div class='circle'>
+				<div class='inner inner4'></div>
+			</div>
+			<div class='circle'>
+				<div class='inner inner5'></div>
+			</div>
+		</div>
+		<div class="num">
+			loading . . .
+			<p id="num">1</p>
+		</div>
+	</div>
+	<div class="page1 page hide" >
+		<div class="p1_bg active"></div>
+		<div class="p1_1">
+			<img src="img/p1_01.gif" alt="">
+		</div>
+		<div class="p1_2"></div>
+		<div class="p1_3"></div>
+		<div class="p1_4 masked">
+			<p class="p1_41">
+				L E G
+
+			</p>
+			<!-- <a class="p1_4f1">G</a> -->
+			<P class="p1_42">
+				E N D
+
+			</P>
+			<!-- <a class="p1_4f2">D</a> -->
+		</div>
+		<div class="p1_5"></div>
+	</div>
+	<div class="page2 page hide">
+		<div class="p2_2"></div>
+		<div class="p2_btn">
+			<div class="p2_btn1"><a href="javascript:;">乐道简介
+				<!-- <p>introduction</p> -->
+			</a> </div>
+			<div class="p2_btn2"><a href="javascript:;">乐道案例
+				<!-- <p>brand case</p> -->
+			</a></div>
+			<!-- <div class="p2_btn3"><a href="">乐道服务</a></div> -->
+			<div class="p2_btn4"><a href="javascript:;">乐道联系</a>
+				<!-- <p>contact</p> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="page3 page hide">
+		<div class="home">
+			<img src="img/home.png" alt="">
+		</div>
+		<div class="p3_1">
+			<img src="img/p3_1.jpg" alt="">
+			<img src="img/p3_2.jpg" alt="">
+			<img src="img/p3_3.jpg" alt="">
+			<img src="img/p3_4.jpg" alt="">
+			<img src="img/p3_5.jpg" alt="">
+			<img src="img/p3_6.jpg" alt="">
+			<img src="img/p3_7.jpg" alt="">
+			<img src="img/p3_8.jpg" alt="">
+		</div>
+	</div>
+	<div class="page4 page hide" id = "app">
+		<div class="home">
+			<img src="img/home.png" alt="">
+		</div>
+		<div class="p4_top">
+			<img src="img/anlie.png" alt="">
+			<h1>品牌案例</h1>
+			<p>BRANDCASE</p>
+		</div>
+		<ul>
+			<li v-for ="anlieList in anlieLists" v-bind:data="anlieList.id" v-on:click="CasetuF($event)">
+				<img :src ='anlieList.brand_logo' alt="">
+				<p>{{anlieList.description}}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="page page4_detail hide">
+		<img src = "" alt="">
+	</div>
+	<div class="page5 page hide">
+		<div class="home">
+			<img src="img/home.png" alt="">
+		</div>
+		<div class="p5_top">
+			<img src="img/p5_top.png" alt="">
+			<h1>联系方式</h1>
+			<p>contact</p>
+		</div>
+		<div class="p5_ma">
+			<img src="img/p5_ma.jpg" alt="">
+			<div class="p5_name">
+				<p>
+					<span class="p5_line"></span>
+					<span class="p5_circle"></span>
+
+				</p>
+				<p>深圳乐道广告</p>
+				<p>
+					<span class="p5_circle"></span>
+					<span class="p5_line"></span>
+				</p>
+			</div>
+		</div>
+		<div class="p5_phone">
+			<img src="img/p5_phone.png" alt="">
+			<a href="tel:0755-83226965"><p>0755-83226965</p></a>
+		</div>
+		<div class="p5_adress">
+			<img src="img/p5_adress.png" alt="">
+			<p>深圳市南山区华侨城文化创意园北区A3栋501</p>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</div>
+</body>
+<script src = "node_modules/vue/dist/vue.js"></script>
+<script src = "node_modules/vue-resource/dist/vue-resource.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	var audio = document.createElement('audio');
+	audio.src = "audio/bgm.mp3";//音乐链接
+	audio.loop = true;//音乐是否循环
+	audio.play();
+	document.addEventListener("WeixinJSBridgeReady", function () {
+		audio.play();
+	}, false);
+	$(".micBtn").on("click",function(){
+		if (audio.paused == true) {
+			audio.play();
+			$(this).addClass("rotate").removeClass("micBtn2");
+		} else {
+			audio.pause();
+			$(this).removeClass("rotate").addClass("micBtn2");
+		}
+	});
+</script>
+
+</html>
