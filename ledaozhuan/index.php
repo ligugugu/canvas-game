@@ -1,0 +1,153 @@
+ <?php
+ require_once "jssdk.php";
+ $appid = 'wx7aca97f524fe4ecc';
+ $jssdk = new JSSDK($appid);
+ $signPackage = $jssdk->GetSignPackage();
+?>
+<!DOCTYPE HTML>
+<html phone="1">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta name="viewport" content="width=750, user-scalable=no" />
+
+<title>乐道传</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<!-- <script>if((/_touchall=1/.test(location.search)||!/auto|house|home|bbs|blog/.test(location.host))&&!/\/dy.163.com\/v2/.test(location.href)&&!(document.documentElement&&document.documentElement.getAttribute("phone"))&&/163\.com/.test(location.host)&&!/_pc=1/.test(location.search)&&/android.*?mobile|ipod|blackberry|bb\d+|phone/i.test(navigator.userAgent))document.write('<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><div style="position:fixed;width:100%;height:100%;background:#fff"><div style="position:absolute;top:50%;left:0;width:100%;height:40px;margin-top:-40px;text-align:center;background:url(http://img1.cache.netease.com/utf8/endpage/image/loading.gif) no-repeat top center;padding-top:40px;color:#666">页面加载中 ...</div></div><script src="http://static.ws.126.net/f2e/system/touchall/collect/foot~M2Tn9VR49xqt.js"'+' defer><'+'/script><plaintext style="display:none">');</script> -->
+
+<link href="css/ent.fiDN0EwfhR0v.35.css" rel="stylesheet" type="text/css" />
+<!-- <script src="js/ntes_jslib_1.x.js" type="text/javascript" charset="gb2312"></script> -->
+<script src="js/ne.js"></script>
+<link rel="stylesheet" href="css/ent_painting2017.1248138.css" />
+
+</head>
+<body>
+<div class="ent_painting2017_wrap" id="ent_painting2017_wrap">
+	<canvas id="app" width="750" height="1206"></canvas>
+</div>
+<div class="collection"></div>
+<div class="cover">
+	<div class="people"></div>
+</div>
+<div id="start" class="hidden"></div>
+<div class="loading">
+	<div class="loading_icon">
+		<div class="loading_color"><div class="loading_con"></div></div>
+
+	</div>
+	<p class ='loading_ing'></p>
+</div>
+<div class="backcover hidden">
+	<div class="lx_last"></div>
+</div>
+<div class="music"></div>
+<!-- <div class="share"></div> -->
+<audio src="audio/bgm.mp3?3" id="audio" loop="loop"></audio>
+<script>
+	// 音频控制
+	audioAutoPlay("audio")
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id);
+        var play = function() {
+            document.removeEventListener("WeixinJSBridgeReady", play);
+            document.removeEventListener("YixinJSBridgeReady", play);
+            audio.play();
+        };
+
+        audio.play();
+        if(window.WeixinJSBridge){
+            audio.play();
+        }
+        //weixin
+        if (typeof WeixinJSBridge == "undefined"){
+            document.addEventListener("WeixinJSBridgeReady", play, false);
+        }else{
+            //yixin
+            document.addEventListener('YixinJSBridgeReady', play, false);
+             audio.play();
+        }
+    }
+</script>
+<!-- <div id="common-loading">
+    <div id="common-loading-center"></div>
+</div>
+<div id="common-landscape">
+    <div id="common-landscape-center"></div>
+</div>
+<div id="common-pc">
+    <div id="common-pc-center"></div>
+</div>
+<div id="common-share">
+    <div style="display: none !important">
+        <div id="__newsapp_sharetext"></div>
+        <div id="__newsapp_sharephotourl"></div>
+        <div id="__newsapp_sharewxtitle"></div>
+        <div id="__newsapp_sharewxtext"></div>
+        <div id="__newsapp_sharewxthumburl"></div>
+        <div id="__newsapp_sharewxurl"></div>
+    </div>
+</div> -->
+<script src="js/ent_painting.min.js"></script>
+<script src="js/zepto_1.1.6.1248091.min.js"></script>
+<!-- 微信分享js begin -->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+	wx.config({
+		debug: false,
+		appId: '<?php echo $signPackage["appId"];?>',
+		timestamp: '<?php echo $signPackage["timestamp"];?>',
+		nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+		signature: '<?php echo $signPackage["signature"];?>',
+		jsApiList: [
+		  // 所有要调用的 API 都要加到这个列表中
+				'checkJsApi',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo'
+		]
+	});
+	window.shareData = {
+	   "imgUrl": "http://h5.ldcywh.com/ledaozhuan/images/share.jpg",
+	   "tLink": "http://h5.ldcywh.com/ledaozhuan/index.php",
+		"tTitle": "乐道传",
+		"tContent": '乐道:具创意的地产广告'
+	};
+	wx.ready(function () {
+		// 在这里调用 API
+		wx.checkJsApi({
+			jsApiList: [
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage'
+			]
+		});
+		wx.onMenuShareAppMessage({
+			title: window.shareData.tTitle,
+			desc: window.shareData.tContent,
+			link: window.shareData.tLink,
+			imgUrl: window.shareData.imgUrl,
+			success: function (res) {
+				//alert('已分享');
+			},
+			cancel: function (res) {
+			   //alert('已取消');
+			}
+		});
+
+		wx.onMenuShareTimeline({
+			title: window.shareData.tTitle,
+			link: window.shareData.tLink,
+			imgUrl: window.shareData.imgUrl,
+			success: function (res) {
+				//alert('已分享');
+			},
+			cancel: function (res) {
+			   //alert('已取消');
+			}
+		});
+	});
+</script>
+</body>
+</html>
