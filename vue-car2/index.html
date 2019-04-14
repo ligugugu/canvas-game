@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=640, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta name="author" content="lixiao">
+    <meta name="Description" content="vue-demo 购物车"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>购物车</title>
+</head>
+<body>
+    <div class="container" id = "app">
+        <div class="car-con">
+            <div class="top"> <!-- 安全提示 -->
+                <i></i>
+                您正在安全购物环境中，请放心购物
+            </div><!-- 安全提示 end-->
+            <div class="car-body"><!-- 中间列表 -->
+                <ul>
+                    <li v-for = "(shop,index) in shopListArr">
+                        <div class="body-top">
+                            <div class="body-top-left"><span>JD</span>京东自营</div>
+                            <div class="body-top-right">京东购物旗舰店</div>
+                        </div>
+                        <div class="body-center">
+                            <input type="checkbox" checked='checked' class="body-center-input" :checked = "shop.checked"  @click = 'singerShopSelected(shop)'>
+                            <div class="body-img">
+                                <img :src = "shop.shopImage" alt="shop.shopName">
+                            </div>
+                            <div class="body-center-right">
+                                <p class="body-center-right-top" v-text = "shop.shopName"></p>
+                                <div class="body-center-right-price-con">
+                                    <span class="body-center-right-price">{{shop.shopPrice  | moneyFormate(shop.shopPrice) }}</span>
+                                    <span class="body-center-right-price-total">{{shop.shopPrice*shop.shopNumber  | moneyFormate(shop.shopPrice*shop.shopNumber) }}</span>
+                                </div>
+                                <div class="body-center-right-bottom">
+                                    <div class="body-num">
+                                        <span @click ="singerShopPrice(shop,false)" class="body-num-1">-</span>
+                                        <input type="text" value="shop.shopNumber" v-model = "shop.shopNumber">
+                                        <span @click ="singerShopPrice(shop,true)">+</span>
+                                    </div>
+                                    <div class="body-del" @click = "clickTrash(shop)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- 中间列表 end-->
+            <div class="car-bottom"><!-- 底部通栏 -->
+                <p class="car-bottom-left">
+                    <a href = "javascript:;" class = "car-bottom-checked"  :class="{checked:isSelectedAll }" @click = "selectedAll(isSelectedAll)"></a>
+                    全选
+                </p>
+                <p>
+                    合计：
+                    <span>{{totalPrice | moneyFormate(totalPrice)}}</span>
+                </p>
+                <button>去结算</button>
+            </div><!-- 底部通栏 end-->
+        </div>
+        <div class="car-opacity " :class = '{"hide":isHideDelPanel}'><!-- 弹层 -->
+            <p>确定删除吗?</p>
+            <div class="car-opacity-con">
+                <span @click= "isHideDelPanel=true">取消</span>
+                <span class="car-opacity-right" @click= "delShop()">确定</span>
+            </div>
+        </div><!-- 弹层 end-->
+    </div>
+    <!-- <script src = "node_modules/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.bootcss.com/vue/2.6.9/vue.js"></script>
+    <!-- <script src = "node_modules/vue-resource/dist/vue-resource.js"></script> -->
+    <script src="https://cdn.bootcss.com/vue-resource/1.4.0/vue-resource.js"></script>
+    <script src = "js/shopCarLoop.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js">
+
+    </script>
+    <script type="text/javascript">
+
+    </script>
+</body>
+</html>

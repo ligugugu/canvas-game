@@ -1,0 +1,64 @@
+*{padding:0;margin:0;}
+div,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,img,ol,ul,li,table,th,td,p,span,a{border:0;}
+img,input{border:none;vertical-align:middle;}
+body{font-family:Arial,Tahoma,Helvetica,;font-size:12px;background:#FFF;color:#000;}
+html{overflow-y:scroll;}
+ul,ol{list-style-type:none;}
+th,td,input{font-size:12px;}
+h3{font-size:14px;}
+button{border:none;cursor:pointer;font-size:12px;background-color:transparent;}
+select{border-width:1px;_zoom:1;border-style:solid;padding-top:2px;font-size:12px;}
+.clear{clear:both;font-size:1px;height:0;visibility:hidden;line-height:0;}
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a:link,a:visited{text-decoration:none;color:#333;}
+/*a:hover,a:active{text-decoration:underline;color:#f60;}*/
+html, body {width: 100%;height: 100%;max-width: 700px;margin: 0 auto;}
+.hide{display: none;}
+.float-left{float: left;
+}
+.float-right{
+	float: right;
+}
+
+/*
+container
+*/
+.container{width: 100%;height: 100%;overflow: auto;background-color: #f1f1f1;}
+.top{line-height: 70px;background-color: #fff;text-align: center;color: #333;font-size: 21px;}
+.top i{vertical-align: middle;display: inline-block;width: 35px;height: 35px;margin-bottom: 3px;background: url(../image/top.png) no-repeat;background-size:contain;}
+.car-body{margin-top: 30px;}
+.car-body li{width: 100%;overflow: hidden;margin-bottom: 20px;background-color: #fff;}
+.body-top{line-height: 60px;border-bottom: 1px solid #ccc;padding: 0 10px;}
+.body-top div{display: inline-block;}
+.body-top-left{font-size: 21px;}
+.body-top-left span{color: red;}
+.body-top-right{float: right;font-size: 20px;color: red;}
+.body-center{padding: 10px;}
+.body-center div{display: inline-block;}
+.body-center-input{float: left;display: inline-block;margin-top: 30px;margin-left: 17px;width: 25px;height: 25px;border: 1px solid #ccc;border-radius: 50%;}
+.body-img{float: left;width: 150px;line-height: 150px;margin: 10px;}
+.body-img img{width: 100%;}
+.body-center-right{width: 385px;}
+.body-center-right-top{font-size: 20px;color: #6f6a6a;}
+.body-center-right-price-con{font-size: 18px;width: 100%;margin-top: 10px;}
+.body-center-right-price-total{float: right;color: red;}
+.body-center-right-bottom{font-size: 25px;margin-top: 20px;width: 100%;}
+.body-num{width: 150px;height: 40px;border: 1px solid;text-align: center;}
+.body-num input{width: 60px;height: 100%;float: left;border-right-style: solid;border-right-width: 1px;text-align: center;font-size: 20px;}
+.body-num span{width: 44px;height: 100%;float: left;}
+.body-num-1{border-right-style: solid;border-right-width: 1px;}
+.body-del{float: right;width: 30px;height: 30px;vertical-align: middle;background: url(../image/del.png) no-repeat;background-size: contain;margin-top: 7px;}
+
+.car-opacity{position: absolute;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.5);}
+.car-opacity p{background-color: #fff;color: #000;font-size: 24px;padding: 50px 100px;margin-top: 30%;text-align: center;}
+.car-opacity-con{padding: 0 50px;padding-top: 40%;}
+.car-opacity-con span{display: inline-block;width: 200px;height: 50px;background-color: #fff;text-align: center;line-height: 50px;font-size: 20px;color: #aaa;}
+.car-opacity-right{float: right;background-color: red !important;color: #fff !important;}
+.car-bottom{position: fixed;bottom: 0;width: 100%;height: 70px;padding: 0 20px;background-color: #fff;}
+.car-bottom p{display: inline-block;font-size: 24px;line-height: 70px;}
+.car-bottom-left a{vertical-align: middle;display: inline-block;width: 25px;height: 25px;margin-right: 20px;border-radius: 50%;border: 1px solid #ccc;}
+.car-bottom button{float: right;width: 150px;height: 100%;background-color: red;color: #fff;font-size: 24px;}
+
+.checked{width: 27px !important;height: 27px !important;background: url(../image/checked.png) no-repeat;background-size: 100% 100%;border: none !important;}
+input[type='checkbox'] :checked{width: 27px !important;height: 27px !important;background: url(../image/checked.png) no-repeat;background-size: 100% 100%;border: none !important;}
