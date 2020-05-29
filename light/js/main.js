@@ -1,7 +1,7 @@
 $(function () {
   var imgSrcArr = [
-    "img/0.png",
-    "img/0-1.png"
+    "img/pre.jpg",
+    "img/pre.gif"
   ];
 
   var imgWrap = [];
