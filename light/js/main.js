@@ -6,13 +6,14 @@ $(function () {
 
   var imgWrap = [];
 
-  function preloadImg (arr) {
-    for (var i = 0; i < arr.length; i++) {
+  function preloadImg () {
+    for (var i = 0; i < preloadImg.arguments[0].length; i++) {
       imgWrap[i] = new Image();
-      imgWrap[i].src = arr[i];
-      images[i].onload
+      imgWrap[i].src = preloadImg.arguments[0][i];
+      imgWrap[i].onload
     }
   }
+  preloadImg(imgSrcArr)
   function preload () {
     var loadImg = [
       'img/01.jpg',
