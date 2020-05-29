@@ -74,9 +74,17 @@ input,button,textarea,a{-webkit-tap-highlight-color: rgba(255,255,255,0);}
 }
 @media screen and (min-height:660px){
   .page1_2 {
-    top: 13% !important;
+    top: 11% !important;
   }
-  
+  .page2_2 {
+    top: 11% !important;
+  }
+  .page3_2 {
+    top: 11% !important;
+  }
+  .page4_2 {
+    top: 11% !important;
+  }
 }
 .swiper-container2 {
   position: absolute;
