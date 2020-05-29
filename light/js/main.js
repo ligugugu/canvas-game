@@ -1,4 +1,18 @@
 $(function () {
+  var imgSrcArr = [
+    "img/0.png",
+    "img/0-1.png"
+  ];
+
+  var imgWrap = [];
+
+  function preloadImg (arr) {
+    for (var i = 0; i < arr.length; i++) {
+      imgWrap[i] = new Image();
+      imgWrap[i].src = arr[i];
+      images[i].onload
+    }
+  }
   function preload () {
     var loadImg = [
       'img/01.jpg',
@@ -91,8 +105,10 @@ $(function () {
   }
   preload()
   let clientW = document.documentElement.clientWidth
+  let clientH = document.documentElement.clientHeight
   let swiper1H = (clientW * 221) / 375
   $('.swiper-container1').css('height', swiper1H + 'px')
+  // $('.swiperPage').css('top', clientH * 25 / 100 + 'px')
   $('.page0_1').css('height', (clientW * 128) / 375 + 'px')
   // console.log(swiper1H);
   var swiper1 = function () {
